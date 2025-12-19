@@ -46,6 +46,7 @@
          <td><img src="assets/pics/pic7.png" alt="pic3" width="300"/></td>
          <td><img src="assets/pics/pic8.png" alt="pic4" width="300"/></td>
           <td><img src="assets/pics/pic9.png" alt="pic6" width="300"/></td>
+           <td><img src="assets/pics/pic12.png" alt="pic5" width="300"/></td>
     </tr>
   </table>
 </div>

@@ -43,6 +43,7 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   shared_preferences: ^2.5.4
+  syncfusion_flutter_treemap: ^32.1.19
 
 dev_dependencies:
   flutter_test:

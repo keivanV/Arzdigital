@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import '../screens/login_screen.dart';
 import '../screens/search_screen.dart';
-import '../screens/favorites_screen.dart'; // 
+import '../screens/favorites_screen.dart';
 import '../screens/crypto_list_screen.dart';
-import '../screens/news_screen.dart'; // 
+import '../screens/news_screen.dart';
+import '../screens/crypto_heatmap_screen.dart';
 
 class MainWrapper extends StatefulWidget {
   const MainWrapper({super.key});
@@ -13,14 +14,15 @@ class MainWrapper extends StatefulWidget {
 }
 
 class _MainWrapperState extends State<MainWrapper> {
-  int _selectedIndex = 3; //
+  int _selectedIndex = 3; // شروع از "ارزها"
 
   static const List<Widget> _pages = [
     LoginScreen(),
     SearchScreen(),
-    FavoritesScreen(), 
+    FavoritesScreen(), // صرافی‌ها
     CryptoListScreen(),
-    NewsScreen(), 
+    NewsScreen(),
+    CryptoHeatmapScreen(),
   ];
 
   void _onItemTapped(int index) {
@@ -51,9 +53,10 @@ class _MainWrapperState extends State<MainWrapper> {
             icon: Icon(Icons.currency_bitcoin),
             label: 'ارزها',
           ),
+          BottomNavigationBarItem(icon: Icon(Icons.article), label: 'اخبار'),
           BottomNavigationBarItem(
-            icon: Icon(Icons.article),
-            label: 'اخبار',
+            icon: Icon(Icons.dashboard),
+            label: 'نمای بازار',
           ), // ← جدید
         ],
       ),

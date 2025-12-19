@@ -466,6 +466,22 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.4.1"
+  syncfusion_flutter_core:
+    dependency: transitive
+    description:
+      name: syncfusion_flutter_core
+      sha256: a984dfd5496ad318e7c42fb26e29a17d1132fe264e45ad11d15dc19a34921af4
+      url: "https://pub.dev"
+    source: hosted
+    version: "32.1.19"
+  syncfusion_flutter_treemap:
+    dependency: "direct main"
+    description:
+      name: syncfusion_flutter_treemap
+      sha256: "43cdd82fb82d70bb5fd02ab5da112976a50050f74e902ba496e24dcd83723790"
+      url: "https://pub.dev"
+    source: hosted
+    version: "32.1.19"
   synchronized:
     dependency: transitive
     description:
@@ -636,4 +652,4 @@ packages:
     version: "1.1.0"
 sdks:
   dart: ">=3.10.4 <4.0.0"
-  flutter: ">=3.35.0"
+  flutter: ">=3.35.1"
