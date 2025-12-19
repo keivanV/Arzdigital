@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import '../screens/login_screen.dart';
 import '../screens/search_screen.dart';
-import '../screens/favorites_screen.dart'; // این صفحه بعداً می‌تونی واقعی کنی
+import '../screens/favorites_screen.dart'; // 
 import '../screens/crypto_list_screen.dart';
+import '../screens/news_screen.dart'; // 
 
 class MainWrapper extends StatefulWidget {
   const MainWrapper({super.key});
@@ -12,13 +13,14 @@ class MainWrapper extends StatefulWidget {
 }
 
 class _MainWrapperState extends State<MainWrapper> {
-  int _selectedIndex = 3; // شروع از "ارزها"
+  int _selectedIndex = 3; //
 
   static const List<Widget> _pages = [
     LoginScreen(),
     SearchScreen(),
-    FavoritesScreen(), // یا صفحه صرافی‌ها در آینده
+    FavoritesScreen(), 
     CryptoListScreen(),
+    NewsScreen(), 
   ];
 
   void _onItemTapped(int index) {
@@ -33,10 +35,8 @@ class _MainWrapperState extends State<MainWrapper> {
       body: _pages[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
-        backgroundColor: Theme.of(context).brightness == Brightness.dark
-            ? Colors.grey[900]
-            : Colors.white,
-        selectedItemColor: Colors.purple,
+        backgroundColor: Colors.black,
+        selectedItemColor: Colors.amber,
         unselectedItemColor: Colors.grey,
         currentIndex: _selectedIndex,
         onTap: _onItemTapped,
@@ -51,6 +51,10 @@ class _MainWrapperState extends State<MainWrapper> {
             icon: Icon(Icons.currency_bitcoin),
             label: 'ارزها',
           ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.article),
+            label: 'اخبار',
+          ), // ← جدید
         ],
       ),
     );
