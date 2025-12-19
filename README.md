@@ -48,7 +48,6 @@
   </table>
 </div>
 
-> Place your actual screenshots in the `/screenshots` folder.
 
 ## Getting Started
 
