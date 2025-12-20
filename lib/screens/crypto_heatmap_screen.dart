@@ -156,7 +156,6 @@ class _CryptoHeatmapScreenState extends State<CryptoHeatmapScreen> {
               final double change = cryptoData[index]['change'];
               final double weight = tile.weight; // marketCap
 
-              // فقط برای کوین‌های بزرگ (بالای ۵۰ میلیارد دلار) متن کامل (symbol + درصد)
               if (weight > 50e9) {
                 return Center(
                   child: FittedBox(
@@ -192,7 +191,6 @@ class _CryptoHeatmapScreenState extends State<CryptoHeatmapScreen> {
                 );
               }
 
-              // برای کوین‌های متوسط (بالای ۱۰ میلیارد) فقط symbol
               if (weight > 10e9) {
                 return Center(
                   child: FittedBox(
@@ -213,7 +211,6 @@ class _CryptoHeatmapScreenState extends State<CryptoHeatmapScreen> {
                 );
               }
 
-              // کوچیک‌تر از ۱۰ میلیارد → هیچ متنی (جلوگیری کامل از overflow)
               return const SizedBox.shrink();
             },
             tooltipBuilder: (BuildContext context, TreemapTile tile) {

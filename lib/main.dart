@@ -6,7 +6,7 @@ import 'wrappers/main_wrapper.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   final prefs = await SharedPreferences.getInstance();
-  final isDark = prefs.getBool('isDark') ?? true; // پیش‌فرض تیره
+  final isDark = prefs.getBool('isDark') ?? true;  
   runApp(MyApp(isDarkMode: isDark));
 }
 

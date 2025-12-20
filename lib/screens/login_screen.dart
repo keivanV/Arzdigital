@@ -68,7 +68,6 @@ class _LoginScreenState extends State<LoginScreen>
         child: SafeArea(
           child: Column(
             children: [
-              // عنوان و لوگو
               Padding(
                 padding: const EdgeInsets.only(top: 40, bottom: 20),
                 child: Column(
@@ -100,7 +99,6 @@ class _LoginScreenState extends State<LoginScreen>
                 ),
               ),
 
-              // کارت ورود/ثبت‌نام
               Expanded(
                 child: Container(
                   margin: const EdgeInsets.fromLTRB(24, 20, 24, 24),
@@ -117,7 +115,6 @@ class _LoginScreenState extends State<LoginScreen>
                   ),
                   child: Column(
                     children: [
-                      // تب‌ها
                       TabBar(
                         controller: _tabController,
                         labelColor: Colors.purple,
@@ -134,17 +131,14 @@ class _LoginScreenState extends State<LoginScreen>
                         ],
                       ),
 
-                      // محتوای تب‌ها — اینجا تغییر اصلی است
                       Expanded(
                         child: TabBarView(
                           controller: _tabController,
                           children: [
-                            // تب ورود — داخل SingleChildScrollView
                             SingleChildScrollView(
                               padding: const EdgeInsets.all(32),
                               child: _buildLoginFormContent(isDark),
                             ),
-                            // تب ثبت‌نام — داخل SingleChildScrollView
                             SingleChildScrollView(
                               padding: const EdgeInsets.all(32),
                               child: _buildRegisterFormContent(isDark),
@@ -163,7 +157,6 @@ class _LoginScreenState extends State<LoginScreen>
     );
   }
 
-  // جدا کردن محتوای فرم‌ها برای خوانایی
   Widget _buildLoginFormContent(bool isDark) {
     return Column(
       children: [
@@ -199,7 +192,6 @@ class _LoginScreenState extends State<LoginScreen>
         ),
         const SizedBox(height: 16),
 
-        // ←←← بخش اصلاح‌شده بدون overflow
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -208,7 +200,7 @@ class _LoginScreenState extends State<LoginScreen>
                 Checkbox(
                   value: _rememberMe,
                   onChanged: (val) => setState(() => _rememberMe = val!),
-                  activeColor: Colors.amber, // با تم زرد هماهنگ
+                  activeColor: Colors.purple,
                 ),
                 const Text('مرا به خاطر بسپار'),
               ],
@@ -232,7 +224,6 @@ class _LoginScreenState extends State<LoginScreen>
           ],
         ),
 
-        // ←←← پایان اصلاح
         const SizedBox(height: 32),
         SizedBox(
           width: double.infinity,
@@ -240,7 +231,7 @@ class _LoginScreenState extends State<LoginScreen>
           child: ElevatedButton(
             onPressed: _submit,
             style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.amber,
+              backgroundColor: Colors.purple,
               foregroundColor: Colors.black,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(16),
@@ -330,7 +321,7 @@ class _LoginScreenState extends State<LoginScreen>
             ),
           ),
         ),
-        const SizedBox(height: 40), // فضای بیشتر در پایین برای اسکرول راحت
+        const SizedBox(height: 40),
       ],
     );
   }

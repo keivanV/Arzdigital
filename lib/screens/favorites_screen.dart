@@ -121,15 +121,15 @@ class FavoritesScreen extends StatelessWidget {
                     0,
                     20,
                     24,
-                  ), // 72 برای هم‌تراز شدن با آیکون
+                  ), 
                   child: Column(
                     crossAxisAlignment:
-                        CrossAxisAlignment.end, // راست‌چین کردن متن
+                        CrossAxisAlignment.end, 
                     children: [
                       Text(
                         exchange['description'] as String,
-                        textAlign: TextAlign.right, // کاملاً راست‌چین
-                        textDirection: TextDirection.rtl, // جهت متن فارسی
+                        textAlign: TextAlign.right, 
+                        textDirection: TextDirection.rtl, 
                         style: TextStyle(
                           fontSize: 15.5,
                           height: 1.7,
@@ -139,7 +139,7 @@ class FavoritesScreen extends StatelessWidget {
                       const SizedBox(height: 20),
                       Align(
                         alignment: Alignment
-                            .centerLeft, // دکمه سمت چپ (برای تعادل بصری)
+                            .centerLeft, 
                         child: ElevatedButton.icon(
                           onPressed: () async {
                             final uri = Uri.parse(

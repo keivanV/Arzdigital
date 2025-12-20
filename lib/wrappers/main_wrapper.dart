@@ -14,12 +14,12 @@ class MainWrapper extends StatefulWidget {
 }
 
 class _MainWrapperState extends State<MainWrapper> {
-  int _selectedIndex = 3; // شروع از "ارزها"
+  int _selectedIndex = 3;
 
   static const List<Widget> _pages = [
     LoginScreen(),
     SearchScreen(),
-    FavoritesScreen(), // صرافی‌ها
+    FavoritesScreen(), 
     CryptoListScreen(),
     NewsScreen(),
     CryptoHeatmapScreen(),
@@ -57,7 +57,7 @@ class _MainWrapperState extends State<MainWrapper> {
           BottomNavigationBarItem(
             icon: Icon(Icons.dashboard),
             label: 'نمای بازار',
-          ), // ← جدید
+          ), //
         ],
       ),
     );

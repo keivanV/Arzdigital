@@ -14,13 +14,11 @@ class _SearchScreenState extends State<SearchScreen> {
   final TextEditingController _searchController = TextEditingController();
   String _searchQuery = '';
 
-  // فیلترها
   String _changeFilter = 'all'; // all, positive, negative
   String _marketCapFilter = 'all'; // all, high, mid, low
-  double _minVolume = 0; // میلیون دلار
+  double _minVolume = 0; 
   Set<String> _selectedCategories = {};
 
-  // دسته‌بندی‌های نمونه
   final List<String> categories = [
     'DeFi',
     'Meme',
@@ -33,7 +31,6 @@ class _SearchScreenState extends State<SearchScreen> {
     'Oracle',
   ];
 
-  // داده‌های نمونه (در آینده از لیست اصلی cryptos بگیر)
   List<Map<String, dynamic>> sampleCryptos = [
     {
       'name': 'Bitcoin',
@@ -125,7 +122,6 @@ class _SearchScreenState extends State<SearchScreen> {
       ),
       body: Column(
         children: [
-          // فیلد جستجو
           Padding(
             padding: const EdgeInsets.all(16),
             child: TextField(
@@ -159,7 +155,6 @@ class _SearchScreenState extends State<SearchScreen> {
             child: ListView(
               padding: const EdgeInsets.symmetric(horizontal: 16),
               children: [
-                // فیلتر تغییرات ۲۴ ساعته
                 _buildFilterSection(
                   title: 'تغییرات ۲۴ ساعته',
                   child: Row(
@@ -186,7 +181,6 @@ class _SearchScreenState extends State<SearchScreen> {
                   ),
                 ),
 
-                // فیلتر مارکت کپ
                 _buildFilterSection(
                   title: 'مارکت کپ',
                   child: Wrap(
@@ -216,7 +210,6 @@ class _SearchScreenState extends State<SearchScreen> {
                   ),
                 ),
 
-                // فیلتر حجم
                 _buildFilterSection(
                   title: 'حداقل حجم ۲۴ ساعته (میلیون دلار)',
                   child: Slider(
@@ -229,7 +222,6 @@ class _SearchScreenState extends State<SearchScreen> {
                   ),
                 ),
 
-                // دسته‌بندی‌ها
                 _buildFilterSection(
                   title: 'دسته‌بندی',
                   child: Wrap(
@@ -295,13 +287,12 @@ class _SearchScreenState extends State<SearchScreen> {
                 ),
                 const SizedBox(height: 12),
 
-                // لیست نتایج
                 if (filteredCryptos.isEmpty)
                   Center(
                     child: Padding(
                       padding: const EdgeInsets.all(32),
                       child: Text(
-                        'هیچ ارزی با این فیلترها یافت نشد 😔',
+                        'هیچ ارزی با این فیلترها یافت نشد ',
                         style: TextStyle(fontSize: 18, color: subColor),
                         textAlign: TextAlign.center,
                       ),
@@ -314,7 +305,6 @@ class _SearchScreenState extends State<SearchScreen> {
                       color: isDark ? Colors.grey[850] : Colors.white,
                       child: ListTile(
                         onTap: () {
-                          // در آینده crypto واقعی رو پاس بده
                           // Navigator.push(context, MaterialPageRoute(builder: (_) => CryptoDetailScreen(crypto: crypto)));
                         },
                         leading: CachedNetworkImage(

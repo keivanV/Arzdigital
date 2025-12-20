@@ -26,7 +26,7 @@ class _CryptoListScreenState extends State<CryptoListScreen> {
 
   final String cmcApiKey = 'a5afbfda-db7e-440b-8a03-4a6134595a5a';
   final String baseUrl = 'https://pro-api.coinmarketcap.com';
-  final double usdToIrr = 620000; // نرخ تقریبی دلار به تومان
+  final double usdToIrr = 620000;
 
   @override
   void initState() {
@@ -86,7 +86,6 @@ class _CryptoListScreenState extends State<CryptoListScreen> {
         });
       }
     } catch (e) {
-      // خطاها نادیده گرفته می‌شوند
     }
   }
 
@@ -179,7 +178,6 @@ class _CryptoListScreenState extends State<CryptoListScreen> {
       ),
       body: Column(
         children: [
-          // آمار بالا
           Container(
             width: double.infinity,
             color: isDark ? Colors.grey[900] : Colors.grey[200],
@@ -209,7 +207,6 @@ class _CryptoListScreenState extends State<CryptoListScreen> {
               ),
             ),
           ),
-          // هدر جدول
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
             color: isDark ? Colors.grey[850] : Colors.grey[300],
@@ -242,7 +239,6 @@ class _CryptoListScreenState extends State<CryptoListScreen> {
               ],
             ),
           ),
-          // لیست ارزها
           Expanded(
             child: loading
                 ? const Center(
@@ -297,7 +293,6 @@ class _CryptoListScreenState extends State<CryptoListScreen> {
                             ),
                             child: Row(
                               children: [
-                                // سمت چپ: تغییرات + مارکت کپ (چپ‌چین)
                                 Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
@@ -313,7 +308,6 @@ class _CryptoListScreenState extends State<CryptoListScreen> {
                                   ],
                                 ),
 
-                                // وسط: قیمت دلار (بالا) و تومان (پایین) — کاملاً وسط و منظم
                                 const Spacer(),
 
                                 Column(
@@ -344,7 +338,6 @@ class _CryptoListScreenState extends State<CryptoListScreen> {
 
                                 const Spacer(),
 
-                                // سمت راست: نام + رتبه + لوگو (راست‌چین)
                                 Row(
                                   mainAxisSize: MainAxisSize.min,
                                   children: [
@@ -447,7 +440,6 @@ class _CryptoListScreenState extends State<CryptoListScreen> {
   }
 }
 
-// کلاس جستجو (بدون تغییر)
 class CryptoSearchDelegate extends SearchDelegate<String> {
   final List<dynamic> cryptos;
   CryptoSearchDelegate(this.cryptos);

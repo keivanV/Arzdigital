@@ -123,7 +123,6 @@ class NewsScreen extends StatelessWidget {
                 padding: const EdgeInsets.all(12),
                 child: Row(
                   children: [
-                    // سمت راست: عکس خبر
                     ClipRRect(
                       borderRadius: BorderRadius.circular(12),
                       child: CachedNetworkImage(
@@ -142,7 +141,6 @@ class NewsScreen extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(width: 16),
-                    // سمت چپ: عنوان و تاریخ
                     Expanded(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.end,
